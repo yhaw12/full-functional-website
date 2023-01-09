@@ -1,0 +1,98 @@
+.in-product{
+    width: 100%;
+    height: 100vh;
+    padding: 0rem 8%;
+    outline: 2px solid red ;
+}
+
+.in-product .text{
+    font-size: 3rem;
+    color: var(--txt-clr);
+    margin-top: 100rem;
+}
+
+.product-container{
+    display: flex;
+    gap: 2rem;
+    flex: 1 1 40rem;
+    outline: 2px solid red;
+}
+
+.product-container .left-part{
+    flex-basis: 55%;
+    width: 700px;
+    display: block;
+    overflow: hidden;
+}
+
+.left-part .bg-img{
+    aspect-ratio: 1;
+    outline: 2px solid blue;   
+}
+
+.left-part .bg-img img{
+    width: 100%;
+}
+
+.left-part .sm-img{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sm-img img{
+    width: 8rem;
+    margin: 0 auto;
+    border: 2px solid lightslategray;
+}
+
+/* ====product details========= */
+.product-container .right-part{
+    flex-basis: 45%;
+    width: 600px;
+}
+
+.right-part h3{
+    margin: 3rem 0 2rem 0;
+    font-size: 2rem;
+}
+
+.right-part span{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.right-part .stars{
+    margin-top: 1rem;
+}
+.right-part .stars i{
+    color: gold;
+}
+
+.right-part p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.right-part .quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.quantity label{
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.quantity input{
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+
