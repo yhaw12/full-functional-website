@@ -2,7 +2,6 @@
     width: 100%;
     height: 100vh;
     padding: 0rem 8%;
-    outline: 2px solid red ;
 }
 
 .in-product .text{
@@ -15,23 +14,21 @@
     display: flex;
     gap: 2rem;
     flex: 1 1 40rem;
-    outline: 2px solid red;
 }
 
 .product-container .left-part{
     flex-basis: 55%;
     width: 700px;
     display: block;
-    overflow: hidden;
 }
 
 .left-part .bg-img{
-    aspect-ratio: 1;
-    outline: 2px solid blue;   
+    aspect-ratio: 1; 
 }
 
 .left-part .bg-img img{
     width: 100%;
+    cursor: pointer;
 }
 
 .left-part .sm-img{
@@ -42,6 +39,7 @@
 }
 
 .sm-img img{
+    cursor: pointer;
     width: 8rem;
     margin: 0 auto;
     border: 2px solid lightslategray;
@@ -94,5 +92,74 @@
     font-size: 1rem;
 }
 
+.right-part .btn{
+    width: 100%;
+    background: transparent;
+    color: var(--txt-clr);
+    font-weight: 800;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin-bottom: 2rem;
+}
 
+.right-part .btn:hover{
+    color: beige;
+    background-color: var(--txt-clr);
+}
 
+/* bottom additional info section */
+.right-part .additional-info{
+    padding: 1rem;
+}
+.right-part .additional-info .info{
+    margin: .2rem 0;
+}
+
+.info .top{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid;
+}
+
+.right-part .top h5{
+    font-size: 1.3rem;
+}
+.right-part .top i{
+    cursor: pointer;
+}
+
+.right-part .additional-info p{
+    display: block;
+}
+
+.right-part .additional-info p.active{
+    display: block;
+}
+
+/* other products section== */
+
+.other-products{
+    width: 100%;
+    height: auto;
+    padding: 3rem 8%;
+}
+
+.other-products .pr-container{
+    border: 1px solid;
+    overflow: hidden;
+}
+
+.pr-container .images{
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pr-container .images img{
+    width: 20rem;
+    flex: 1;
+}

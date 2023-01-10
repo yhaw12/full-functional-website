@@ -1,27 +1,18 @@
- const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  autoplay:{
-    delay: 2000,
-    disableinteractions: false,
-  },
-  loop: true,
+// product page javascript
+let mnImage = document.querySelector('#mn-img');
+function changeImg(any){
+  mnImage.src = any;
+}
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+let pText = document.querySelectorAll('.p');
 
-  // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+pText.forEach((item)=>{
+    const btn = item.querySelector('.fa-plus');
+   console.log(btn) 
+// btn.addEventListener('click', ()=>{
+//     pText.classlist.toggle('active');
 
-  // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
+//   });
+
+
 });
-
-
-

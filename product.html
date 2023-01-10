@@ -19,7 +19,7 @@
     <title>Flower Website</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <i id="sidebar" class="fas fa-bars"></i>
 
         <div class="logo">
@@ -41,7 +41,7 @@
             <a href="#" class="fas fa-shopping-cart"></a>
             <a href="#" class="fas fa-user"></a>
         </div>
-    </header>
+    </header> -->
 
 
     <section class="product" id="product">
@@ -53,19 +53,21 @@
         <div class="product-container">
             <div class="left-part">
                 <div class="bg-img">
-                    <img src="images/img-1.jpg">
+                    <img id="mn-img" src="images/img-1.jpg">
                 </div>
                 <div class="sm-img">
-                    <img src="images/img-1.jpg">
-                    <img src="images/img-2.jpg">
-                    <img src="images/img-3.jpg">
-                    <img src="images/img-4.jpg">
+                    <img onclick="changeImg('images/img-1.jpg')" src="images/img-1.jpg">
+                    <img onclick="changeImg('images/img-2.jpg')" src="images/img-2.jpg">
+                    <img onclick="changeImg('images/img-3.jpg')" src="images/img-3.jpg">
+                    <img onclick="changeImg('images/img-4.jpg')" src="images/img-4.jpg">
+                           
+                           
                 </div>
             </div>
 
             <div class="right-part">
                 <h3>Flower Pot</h3>
-                <span> $122.99</span>
+                <span> $12.99</span>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -75,8 +77,7 @@
                 </div>
 
                 <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corrupti Asperiores Laboriosam Praesentium Enim Maiores? Ad Repellat Voluptates Alias Facere Repudiandae Dolor Accusamus Enim Ut Odit, Aliquam Nesciunt Eaque Nulla Dignissimos. <br> <br>
-                Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corrupti Asperiores Laboriosam Praesentium Enim Maiores? Ad Repellat Voluptates Alias Facere Repudiandae Dolor Accusamus Enim Ut Odit, Aliquam Nesciunt Eaque Nulla Dignissimos.
-                </p>
+                Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corrupti Asperiores Laboriosam Praesentium Enim Maiores?</p>
 
                 <div class="quantity">
                     <label for="number"> Quantity</label>
@@ -88,15 +89,34 @@
 
                 <div class="additional-info">
                     <div class="info">
-                        <h5>Benefits Of Flower</h5> <i class="fas fa-plus"></i>
+                        <div class="top">
+                            <h5>Benefits Of Flower</h5> <i class="fas fa-plus"></i>
+                        </div>
+                        <p id="p">Ad Repellat Voluptates Alias Facere Repudiandae Dolor Accusamus Enim Ut Odit, Aliquam Nesciunt Eaque Nulla Dignissimos</p>
                     </div>
                     <div class="info">
-                        <h5>Choices Of Flower</h5> <i class="fas fa-plus"></i>
+                        <div class="top">
+                            <h5>Flower Choices</h5> <i class="fas fa-plus"></i>
+                        </div>
+                        <p id="p">Ad Repellat Voluptates Alias Facere Repudiandae Dolor Accusamus Enim Ut Odit, Aliquam Nesciunt Eaque Nulla Dignissimos</p>
                     </div>
                 </div>
-    
             </div>
+        </div>
+    </section>
 
+    <!-- other products section -->
+    <section class="other-products">
+        <div class="text">
+            <h3><a href="#">Products You May Like</a></h3>
+        </div>
+        <div class="pr-container">
+            <div class="images">
+                <img src="images/img-6.jpg">
+                <img src="images/img-7.jpg">
+                <img src="images/img-8.jpg">
+                <img src="images/img-9.jpg">
+            </div>
         </div>
     </section>
     <footer>
@@ -140,7 +160,7 @@
         <div class="credit"> Recreated by <span> Blankson Obeng </span> | all rights reserved </div>
     
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>
 
