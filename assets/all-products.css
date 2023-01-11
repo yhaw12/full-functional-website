@@ -1,0 +1,91 @@
+ .all-products{
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+}
+
+.all-products .text{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.all-products .text h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+
+.all-products .container{
+    text-align: center;
+}
+
+.all-products .container button{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.all-products .container button{
+    margin: 3rem 1rem;
+}
+.product{
+    padding: 1rem;
+    background-color: rgb(223, 221, 221);
+}
+
+#product-cards{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+}
+/* .all-products .product{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+.product .pr-details{
+    padding: 1rem;
+    overflow: hidden;
+    background-color: rgb(226, 225, 225); 
+}
+
+.product .pr-details .image{
+    width: 15rem;
+}
+
+.product .image{
+    width: 100%;
+}
+
+.pr-details .btns{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns a{
+    width: 8rem;
+    background: rgb(233, 149, 163);
+    padding: 1rem .5rem;
+    border-radius: 4px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.btns:hover a{
+    background-color: transparent;
+    border: 2px solid rgb(233, 149, 163) ;
+}
+
+.btns .buy{
+    background: transparent;
+    border: 2px solid rgb(233, 149, 163);
+}
+
+.btns:hover .buy{
+    background-color: rgb(233, 149, 163);
+    color: beige;
+} */
+
+
