@@ -1,3 +1,37 @@
+// sidemenu bars
+let bars = document.querySelector('.fa-bars');
+
+bars.addEventListener('click', ()=>{
+  document.querySelector(".links").classList.toggle('show');
+});
+
+// login form
+
+let user = document.querySelector('.fa-user');
+let closeBtn = document.querySelector('.fa-times');
+
+user.addEventListener('click', function(){
+  document.querySelector('.login').classList.toggle('active');
+  document.querySelector(".links").classList.remove('show');
+});
+
+// login form close button
+closeBtn.addEventListener('click', ()=>{
+   document.querySelector('.login').classList.remove('active');
+  
+});
+
+window.addEventListener('scroll', function(){
+  document.querySelector('.login').classList.remove('active');
+  document.querySelector(".links").classList.remove('show');
+
+
+});
+
+
+
+
+
 // product page javascript
 let mnImage = document.querySelector('#mn-img');
 function changeImg(any){
@@ -82,18 +116,13 @@ window.onload = ()=>{
   filter('all');
 };
 
+
 // filtering the products
-// function filter(value){
-//   let buttons = document.querySelectorAll('.btn-products');
-//   buttons.forEach(button =>{
-//     if (value.toUpperCase() == button.innerText.toUpperCase()){
+//  
 
-//     }
-
-//   });
-
-// }
-
+function filter(value){
+  
+}
  
 
 

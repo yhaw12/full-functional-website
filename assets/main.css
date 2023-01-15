@@ -131,7 +131,7 @@ header .icons1 a{
     width: 100%;
     height: 100vh;
     padding: 0 8%;
-    background-image: url('images/home-bg.jpg'); 
+    background-image: url('images/home-bg.jpg');  
     background-position: center;
     background-size: cover;
     position: relative;
@@ -159,27 +159,133 @@ header .icons1 a{
 }
 
 
-/* SLIDER========= */
-/* .slider {
-    width: 100%;
-    height: auto;
-    padding: 3rem 8%;
-    background: #EEEEEE;
-    outline: 2px solid red;
-    
+/* LOGIN FORM */
+.login{
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    width: 300px;
+    height:  auto !important;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+    display: none;
+    transition: all .3s ease;
+}
+.login.active{
+    display: block;
 }
 
-.swiper .swiper-wrapper{
+.login .fa-times{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.login h2{
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 10vh;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login form label{
+    color: #333333;
+    opacity: .8;
+    margin-bottom: .2rem;
+}
+
+.login form input{
+    background-color: transparent;
+    border: 1px solid;
+    opacity: .5;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    padding: .7rem;
+}
+form .chckbox{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+
+.login button{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login form span{
+    display: flex;
+    justify-content: flex-end;
+    margin: .3rem 0;
+}
+
+.login h5{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.login h5::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #c4c4c4;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.login p{
+    margin-top: .7rem;
+    text-align: center;
+}
+
+.login p >a{
+    text-decoration: underline;
+}
+
+/* SLIDER========= */
+
+.slider{
+    width: 100%;
+    height: auto;
+    padding: 2rem 8%;
+}
+
+.slider .slides{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
-    margin: 0 auto;
+    overflow-x: hidden;
+    border: 2px solid grey;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 300ms ease;
 }
 
-.swiper-wrapper div{
-    margin: 0 auto;
-} */
+.slider .slides img{
+    animation: slideright 10s linear forwards infinite;
+    animation-timing-function: infinite;
+}
+@keyframes slideright{
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
 
 /* ======ABOUT SECTION======== */
 .about{
@@ -591,12 +697,16 @@ footer .credit{
     }
     header ul{
         position: absolute;
-        left: 0;
-        right: 0;
+        left: -1000px;
         top: 100%;
-        display: none;
         width: 100%;
+        display: block;
         background: #EEEEEE;
+        transition: all 300ms ease;
+     }
+
+    header ul.show{
+        left: 0;
     }
     header .navlinks li{
         background-color: #fff;
