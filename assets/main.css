@@ -159,13 +159,61 @@ header .icons1 a{
 
 /* checkout */
 .items{
-    width: 100%;
+    position: absolute;
+    right: 10px;
+    top: 15%;
+    width: 300px;
     height: auto;
-    padding: 3rem 8%;
+    padding: 2rem ;
+    background-color: rgb(210, 220, 223);
+    border-radius: 10px;
+    z-index: 3000;
+    display: none;
 }
 
+.items.show{
+    display: block;
+}
 
+.items .sm-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.items .sm-cards img{
+    width: 4rem;
+    margin: .5rem 0;
+}
+.sm-cards .fa-trash{
+    cursor: pointer;
+    color: gray;
+    transition: all 300ms ease;
+}
+
+.sm-cards .fa-trash:hover{
+    color: var(--clr);
+}
+
+.bt .prim-btn{
+    background-color: var(--clr);
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.items .bt{
+    margin-top: 1rem;
+}
+
+.bt .number{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
 
 /* LOGIN FORM */
 .login{

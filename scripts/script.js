@@ -1,32 +1,39 @@
 // sidemenu bars
 let bars = document.querySelector('.fa-bars');
 
-bars.addEventListener('click', ()=>{
-  document.querySelector(".links").classList.toggle('show');
-});
+// bars.addEventListener('click', ()=>{
+//   document.querySelector(".links").classList.toggle('show');
+// });
 
 // login form
 
 let user = document.querySelector('.fa-user');
 let closeBtn = document.querySelector('.fa-times');
 
-user.addEventListener('click', function(){
-  document.querySelector('.login').classList.toggle('active');
-  document.querySelector(".links").classList.remove('show');
-});
+// user.addEventListener('click', function(){
+//   document.querySelector('.login').classList.toggle('active');
+//   document.querySelector(".links").classList.remove('show');
+// });
 
 // login form close button
-closeBtn.addEventListener('click', ()=>{
-   document.querySelector('.login').classList.remove('active');
-  
-});
-
-window.addEventListener('scroll', function(){
-  document.querySelector('.login').classList.remove('active');
-  document.querySelector(".links").classList.remove('show');
+// closeBtn.addEventListener('click', ()=>{
+//    document.querySelector('.login').classList.remove('active');
+// });
 
 
-});
+// checkout 
+// let checkOut = document.querySelector('.fa-shopping-cart');
+// checkOut.addEventListener('click', ()=>{
+//   document.querySelector('.items').classList.toggle('show');
+// });
+
+
+
+// window.addEventListener('scroll', function(){
+//   document.querySelector('.login').classList.remove('active');
+//   document.querySelector(".links").classList.remove('show');
+//   document.querySelector('.items').classList.remove('show');
+// });
 
 
 
@@ -42,7 +49,7 @@ function changeImg(any){
 let items = {
   data:[
     {
-      productName: "Rose Flower",
+      productName: "blue Flower",
       category: "Small Flowers",
       image: "images/img-1.jpg"
     },
@@ -52,7 +59,7 @@ let items = {
       image: "images/img-2.jpg"
     },
     {
-      productName: "Rose Flower",
+      productName: "Red Flower",
       category: "Small Flowers",
       image: "images/img-3.jpg"
     },
@@ -64,12 +71,14 @@ let items = {
   ]
 };
 
-for (let i of items.data){
+
+function products(){
+  for (let i of items.data){
   // create products card
   let card = document.createElement('div');
 
   // add categories to cards
-  card.classList.add("card", "i.categories");
+  card.classList.add("card", "i.category");
 
   // create image container
   let imgContainer = document.createElement('div');
@@ -80,7 +89,7 @@ for (let i of items.data){
   image.setAttribute('src', i.image);
   imgContainer.appendChild(image);
   card.appendChild(imgContainer);
-
+  
 
   // button============
   let container = document.createElement('div');
@@ -95,38 +104,49 @@ for (let i of items.data){
   let btn = document.createElement('button');
   btn.classList.add('btn');
   btn.innerText = "Add To Cart"
-  container.appendChild(btn)
+  container.appendChild(btn);
 
   // add wishlist =========
   let wishlist = document.createElement('i');
   wishlist.classList.add("wishlist");
   wishlist.innerHTML = '<i class="fas fa-heart fa-2x"></i>';
-  container.appendChild(wishlist)
+  container.appendChild(wishlist);
 
-
-  card.appendChild(imgContainer);
   card.appendChild(container);
 
   document.getElementById('product-cards').appendChild(card);
 };
+}
 
 
-// when the pages load
-window.onload = ()=>{
-  filter('all');
-};
+
+
+
+
 
 
 // filtering the products
-//  
-
-function filter(value){
-  
-}
  
+let searcInput = document.querySelector(".srch");
 
+function filter(){
 
+  searcInput.addEventListener('keyup', ()=>{
+    products()
+    let searchResults = searcInput.value.toUpperCase();
+    for (let name of items.data){
+      let productsName = name.productName.toUpperCase();
 
-
-
+      if (productsName.indexOf(searchResults)!= -1){
+        document.getElementById('product-cards').appendChild(card).style.display = 'block';
+      }
+      else{
+        document.getElementById('product-cards').appendChild(card).style.display = "none";
+      }
+    }
    
+  })
+}
+
+
+filter();

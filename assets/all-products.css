@@ -20,7 +20,7 @@
 .all-products .container{
     text-align: center;
 }
-
+/* 
 .all-products .container button{
     cursor: pointer;
     border-radius: 10px;
@@ -28,6 +28,24 @@
 
 .all-products .container button{
     margin: 3rem 1rem;
+} */
+
+
+.search{
+    margin: 3rem 0;
+}
+
+.search input{
+    width: 35rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+input:is(::placeholder, :focus, :active ){
+    border: none;
+    outline: none;
 }
 .product{
     padding: 1rem;
